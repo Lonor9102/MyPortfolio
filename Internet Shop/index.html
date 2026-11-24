@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="THREADS — магазин современной одежды">
+    <title>THREADS — Магазин одежды</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">THREADS</a>
+
+            <nav class="navigation">
+                <a href="#catalog">Каталог</a>
+                <a href="#about">О магазине</a>
+            </nav>
+
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Переключить тему" title="Переключить тему">
+                🌙
+            </button>
+
+            <button class="cart-button" type="button" id="open-cart">
+                Корзина <span class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h2>Корзина</h2>
+                <button class="close-cart" id="close-cart" type="button">
+                    &times;
+                </button>
+            </div>
+
+            <div class="cart-items" id="cart-items"></div>
+
+            <div class="cart-footer">
+                <p>Итого: <span id="cart-total">0 ₽</span></p>
+                <button class="checkout-button" type="button">
+                    Оформить заказ
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <p class="hero-label">НОВАЯ КОЛЛЕКЦИЯ</p>
+                <h1>Стиль начинается<br>с деталей.</h1>
+                <p class="hero-description">
+                    Современная одежда для тех, кто выбирает свой стиль.
+                </p>
+                <a href="#catalog" class="hero-button">Смотреть каталог</a>
+            </div>
+        </section>
+
+
+<section class="catalog" id="catalog">
+    <div class="container">
+        <h2>Наш каталог</h2>
+
+        <div class="filters">
+            <button class="filter-button active" data-category="all">
+                Все товары
+            </button>
+
+            <button class="filter-button" data-category="Футболки">
+                Футболки
+            </button>
+
+            <button class="filter-button" data-category="Худи">
+                Худи
+            </button>
+
+            <button class="filter-button" data-category="Свитшоты">
+                Свитшоты
+            </button>
+
+            <button class="filter-button" data-category="Куртки">
+                Куртки
+            </button>
+        </div>
+
+        <div class="catalog-toolbar">
+            <div class="search">
+                <input type="text" id="product-search" placeholder="Поиск товаров...">
+            </div>
+
+            <select id="sort-select">
+                <option value="default">Без сортировки</option>
+                <option value="cheap">Сначала дешевле</option>
+                <option value="expensive">Сначала дороже</option>
+            </select>
+
+            <button id="reset-filters" type="button">
+                Сбросить фильтры
+            </button>
+        </div>
+
+        <div class="products" id="products"></div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer" id="about">
+        <div class="container">
+            <p>THREADS — демонстрационный проект портфолио</p>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast">
+  Товар добавлен в корзину!
+</div>
+
+</body>
+
+</html>
